@@ -1,0 +1,4 @@
+pt\goncalo\poc\streamapi\StreamapiApplication.class
+pt\goncalo\poc\streamapi\controller\PersonController.class
+pt\goncalo\poc\streamapi\repository\PersonRepository.class
+pt\goncalo\poc\streamapi\model\Person.class
