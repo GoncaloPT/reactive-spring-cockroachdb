@@ -2,11 +2,11 @@ package pt.goncalo.poc.streamapi.controller;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j2;
-import org.reactivestreams.Publisher;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import pt.goncalo.poc.streamapi.model.ChatMessage;
 import pt.goncalo.poc.streamapi.service.ChatService;
+import reactor.core.publisher.Flux;
 
 import javax.validation.Valid;
 
@@ -19,7 +19,7 @@ public class ChatController {
 
     @CrossOrigin
     @GetMapping(produces = MediaType.TEXT_EVENT_STREAM_VALUE, value = "/messages")
-    public Publisher<ChatMessage> messagePublisher(){
+    public Flux<ChatMessage> messagePublisher(){
         return service.getMessagePublisher();
     }
     @CrossOrigin
