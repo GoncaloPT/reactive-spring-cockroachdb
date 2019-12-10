@@ -13,7 +13,6 @@ import javax.validation.Valid;
 @RestController
 @AllArgsConstructor
 @Log4j2
-
 public class ChatController {
     private final ChatService service;
 
