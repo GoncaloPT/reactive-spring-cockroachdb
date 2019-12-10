@@ -1,0 +1,10 @@
+D:\codigo\poc\reactive-spring-cockroachdb\backend\src\main\java\pt\goncalo\poc\streamapi\repository\PersonRepository.java
+D:\codigo\poc\reactive-spring-cockroachdb\backend\src\main\java\pt\goncalo\poc\streamapi\controller\ChatController.java
+D:\codigo\poc\reactive-spring-cockroachdb\backend\src\main\java\pt\goncalo\poc\streamapi\repository\ChatRepository.java
+D:\codigo\poc\reactive-spring-cockroachdb\backend\src\main\java\pt\goncalo\poc\streamapi\controller\PersonController.java
+D:\codigo\poc\reactive-spring-cockroachdb\backend\src\main\java\pt\goncalo\poc\streamapi\model\ChatRoom.java
+D:\codigo\poc\reactive-spring-cockroachdb\backend\src\main\java\pt\goncalo\poc\streamapi\StreamapiApplication.java
+D:\codigo\poc\reactive-spring-cockroachdb\backend\src\main\java\pt\goncalo\poc\streamapi\service\ChatService.java
+D:\codigo\poc\reactive-spring-cockroachdb\backend\src\main\java\pt\goncalo\poc\streamapi\model\ChatMessage.java
+D:\codigo\poc\reactive-spring-cockroachdb\backend\src\main\java\pt\goncalo\poc\streamapi\model\Person.java
+D:\codigo\poc\reactive-spring-cockroachdb\backend\src\main\java\pt\goncalo\poc\streamapi\AppInitializer.java
