@@ -13,7 +13,8 @@ export class AppComponent implements OnInit {
   title = "chat";
   event: Observable<ChatMessage>;
   message: string;
-  messages: Array<ChatMessage> = [];
+  name: string;
+  messages: Array<ChatMessage> ;
   constructor(private messageService: MessageService,
     private ngZone: NgZone) {}
   ngOnInit(): void {
@@ -22,6 +23,8 @@ export class AppComponent implements OnInit {
       .subscribe( newMessage => {
         console.log('received evt: ', newMessage);
         this.ngZone.run( () => {
+          if(!this.messages)
+          this.messages = [];
           this.messages.push(newMessage);
        });
       });
@@ -31,7 +34,7 @@ export class AppComponent implements OnInit {
     var chatMessage = new ChatMessage();
     chatMessage.date = new Date();
     chatMessage.message = this.message;
-    chatMessage.sender = "sender1";
+    chatMessage.sender = this.name;
     this.messageService
       .send(chatMessage)
       .then(() => {

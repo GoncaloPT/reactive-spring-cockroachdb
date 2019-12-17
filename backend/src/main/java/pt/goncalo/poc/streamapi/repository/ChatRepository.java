@@ -1,4 +1,7 @@
 package pt.goncalo.poc.streamapi.repository;
 
-public interface ChatRepository {
+import org.springframework.data.repository.reactive.ReactiveCrudRepository;
+import pt.goncalo.poc.streamapi.model.ChatMessage;
+
+public interface ChatRepository extends ReactiveCrudRepository<Integer, ChatMessage> {
 }
