@@ -14,7 +14,7 @@ import java.util.stream.Stream;
 
 
 @Component()
-public class ChatService {
+public class ChatService implements IChatService{
 
     private UnicastProcessor<ChatMessage> eventPublisher = UnicastProcessor.create();
     private Flux<ChatMessage> messages = eventPublisher.publish().autoConnect();
@@ -25,7 +25,7 @@ public class ChatService {
     }
 
     public void publishMessage(String personId, String message) {
-        ChatMessage chatMessage = new ChatMessage(personId, message, new Date());
+        ChatMessage chatMessage = new ChatMessage(null,personId, message, new Date());
         eventPublisher.onNext(chatMessage);
     }
 }
