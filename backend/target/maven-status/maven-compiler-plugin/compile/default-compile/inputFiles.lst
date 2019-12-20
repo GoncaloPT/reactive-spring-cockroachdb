@@ -1,3 +1,4 @@
+/home/goncalo/codigo/reactive-spring-cockroach-chat/backend/src/main/java/pt/goncalo/poc/streamapi/service/DatabaseChatService.java
 /home/goncalo/codigo/reactive-spring-cockroach-chat/backend/src/main/java/pt/goncalo/poc/streamapi/controller/ChatController.java
 /home/goncalo/codigo/reactive-spring-cockroach-chat/backend/src/main/java/pt/goncalo/poc/streamapi/repository/PersonRepository.java
 /home/goncalo/codigo/reactive-spring-cockroach-chat/backend/src/main/java/pt/goncalo/poc/streamapi/model/ChatMessage.java
@@ -6,5 +7,6 @@
 /home/goncalo/codigo/reactive-spring-cockroach-chat/backend/src/main/java/pt/goncalo/poc/streamapi/model/ChatRoom.java
 /home/goncalo/codigo/reactive-spring-cockroach-chat/backend/src/main/java/pt/goncalo/poc/streamapi/AppInitializer.java
 /home/goncalo/codigo/reactive-spring-cockroach-chat/backend/src/main/java/pt/goncalo/poc/streamapi/service/ChatService.java
+/home/goncalo/codigo/reactive-spring-cockroach-chat/backend/src/main/java/pt/goncalo/poc/streamapi/service/IChatService.java
 /home/goncalo/codigo/reactive-spring-cockroach-chat/backend/src/main/java/pt/goncalo/poc/streamapi/StreamapiApplication.java
 /home/goncalo/codigo/reactive-spring-cockroach-chat/backend/src/main/java/pt/goncalo/poc/streamapi/model/Person.java

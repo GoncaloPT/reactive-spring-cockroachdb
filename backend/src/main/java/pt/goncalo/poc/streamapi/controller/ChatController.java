@@ -6,6 +6,7 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import pt.goncalo.poc.streamapi.model.ChatMessage;
 import pt.goncalo.poc.streamapi.service.ChatService;
+import pt.goncalo.poc.streamapi.service.IChatService;
 import reactor.core.publisher.Flux;
 
 import javax.validation.Valid;
@@ -14,7 +15,7 @@ import javax.validation.Valid;
 @AllArgsConstructor
 @Log4j2
 public class ChatController {
-    private final ChatService service;
+    private final IChatService service;
 
     @CrossOrigin
     @GetMapping(produces = MediaType.TEXT_EVENT_STREAM_VALUE, value = "/messages")
@@ -28,5 +29,13 @@ public class ChatController {
         log.info("received a new message {} from sender {}",message.getMessage(),message.getSender());
         service.publishMessage(message.getSender(),message.getMessage());
     }
+
+    @CrossOrigin
+    @GetMapping(value = "/")
+    public Flux<ChatMessage> list(){
+        return service.getMessagePublisher();
+    }
+
+
 
 }
