@@ -8,7 +8,8 @@ backend/spring-boot:run
 ng serve
 
 ## to run coackroach (on docker)
-docker container run -p 26257:26257 043316b7542b start --insecure
+<imageid> = docker image ls 
+docker container run -p 26257:26257 -p 18080:8080 <imageid> start --insecure
 
 ### Backend startup
 If a valid connection to coackroach database exists, than the app will make sure the chat_message table exists

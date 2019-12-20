@@ -3,6 +3,7 @@ package pt.goncalo.poc.streamapi.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.ToString;
 import org.springframework.data.annotation.Id;
 
 import javax.validation.constraints.NotNull;
@@ -10,6 +11,7 @@ import java.util.Date;
 
 @AllArgsConstructor
 @EqualsAndHashCode
+@ToString
 @Data
 public class ChatMessage implements Comparable{
     public ChatMessage() {
