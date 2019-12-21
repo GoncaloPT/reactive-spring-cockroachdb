@@ -17,9 +17,10 @@ public class ChatService implements IChatService{
         return messages;
     }
 
-    public void publishMessage(String personId, String message) {
+    public ChatMessage publishMessage(String personId, String message) {
         ChatMessage chatMessage = new ChatMessage(null,personId, message, new Date());
         eventPublisher.onNext(chatMessage);
+        return chatMessage;
     }
 
 
