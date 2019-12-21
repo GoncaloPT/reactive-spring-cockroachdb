@@ -6,7 +6,7 @@ import reactor.core.publisher.Flux;
 public interface IChatService {
     public Flux<ChatMessage> getMessagePublisher();
 
-    public void publishMessage(String personId, String message);
+    public ChatMessage publishMessage(String personId, String message);
 
 
 }

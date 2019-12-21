@@ -22,12 +22,14 @@ public class AppInitializer {
     public void initialize(){
 
         log.warn("Inside initialize");
-        Mono<Void> chat_message_table_created = dbClient.execute("Create table chat_message (" +
+
+
+        Mono<Void> chat_message_table_created = dbClient.execute("CREATE TABLE IF NOT EXISTS chat_message (" +
                 "id int, " +
                 "sender varchar(255), " +
                 "message varchar(2000), " +
-                "date DATE )").then().doOnSuccess(a -> log.warn("Chat Message table created"))
-                .doOnError(ex -> log.warn("error creating table", ex));
+                "date DATE )").then().doOnSuccess(a -> log.info("INITIALIZER - Chat Message table exists!!"));
+                //.doOnError(ex -> log.warn("error creating table", ex));
         chat_message_table_created.subscribe();
 
        /*

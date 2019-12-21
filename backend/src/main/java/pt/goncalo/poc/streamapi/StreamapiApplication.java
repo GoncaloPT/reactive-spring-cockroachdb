@@ -10,4 +10,7 @@ public class StreamapiApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(StreamapiApplication.class, args);
 	}
+
+
+
 }
